@@ -88,7 +88,7 @@ resource "time_sleep" "wait_for_authentication_to_take_affect" {
 }
 module "port_ocean_cloud_run" {
   source                = "../../modules/gcp_helpers/cloud_run"
-  service_account_name  = module.port_ocean_authorization.service_account_name
+  service_account_name  = module.port_ocean_authorization.service_account_name.email
   environment_variables = local.envs
   project               = var.gcp_ocean_setup_project
   image                 = var.gcp_ocean_integration_image
