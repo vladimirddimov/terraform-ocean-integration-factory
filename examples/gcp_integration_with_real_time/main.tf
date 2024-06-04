@@ -1,11 +1,11 @@
 locals {
   envs = var.environment_variables != null ? var.environment_variables : [
     {
-      name  = "PORT_CLIENT_ID",
+      name  = "OCEAN__PORT__CLIENT_ID",
       value = var.port_client_id
     },
     {
-      name  = "PORT_CLIENT_SECRET",
+      name  = "OCEAN__PORT__CLIENT_SECRET",
       value = var.port_client_secret
     },
     {
