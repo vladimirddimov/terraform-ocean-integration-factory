@@ -44,8 +44,16 @@ locals {
     "run.routes.invoke",
   "run.jobs.run"]
   asset_types = var.assets_types_for_monitoring != null ? var.assets_types_for_monitoring : [
+    "artifactregistry.googleapis.com/DockerImage",
+    "artifactregistry.googleapis.com/Repository",
     "cloudresourcemanager.googleapis.com/Organization",
+    "cloudresourcemanager.googleapis.com/Folder",
     "cloudresourcemanager.googleapis.com/Project",
+    "firestore.googleapis.com/Database",
+    "container.googleapis.com/Cluster",
+    "container.googleapis.com/NodePool",
+    "iam.googleapis.com/Role",
+    "iam.googleapis.com/ServiceAccount",
     "storage.googleapis.com/Bucket",
     "cloudfunctions.googleapis.com/CloudFunction",
     "pubsub.googleapis.com/Subscription",
